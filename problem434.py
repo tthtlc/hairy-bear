@@ -1,4 +1,6 @@
 
+############# NOTE:   UNSOLVED yet (problem 434)
+
 import math
 
 def rigid(m,n):    # write Fibonacci series up to n
