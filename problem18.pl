@@ -1,4 +1,7 @@
 #!/usr/bin/perl
+#### this is capable to solve problem 18 and 67 at the same time
+### http://projecteuler.net/problem=18
+### http://projecteuler.net/problem=67
 use Switch;
 
 switch ($ARGV[0]) {
