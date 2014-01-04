@@ -6,7 +6,7 @@ def rigid(m,n):    # write Fibonacci series up to n
         result=[]
 	if (m>1):
 		return rigid(m-1,n)*n
-	else if (m==1):
+	elif (m==1):
 		return 1
 	
 
