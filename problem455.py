@@ -8,9 +8,6 @@
 ##  sum(f(n)), 2< n<  103 = 442530011399
 ##Find sum(f(n)), 2  n  106.
 
-print 411728896, 4411728896 %1000000000, 490411728896%1000000000
-print 10**9
-
 max_modulo=10**9
 
 def f(x):
@@ -21,7 +18,17 @@ def f(x):
 			return prod
 		if (prod > max_modulo):
 			prod %= max_modulo
-	return prod
+			if prod == 0:
+				return 0
+	return -1
 
-print f(157)
 print f(4)
+sum=0
+for i in range(2,10**3+1):
+	sum1 = f(i)
+	print sum1, i
+	sum += sum1
+
+## ans is 442530011399
+print f(157)   ## 743757 correct
+print f(4)   ### 411728896
