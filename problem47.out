@@ -512,48 +512,10 @@
 
 
 
+===============================================
 
 
 
-
-
-
-
-
-[3, 19, 41, 43]
-[2, 5, 13, 773]
-[317]
-100596 100595 100594 100593
-[2, 3, 83, 101]
-[5, 11, 31, 59]
-[2, 13, 53, 73]
-[3, 11177]
-^CTraceback (most recent call last):
-  File "problem47.py", line 38, in <module>
-    next=len(find_prime_factor(j))
-  File "problem47.py", line 28, in find_prime_factor
-    if (a%prime_factor[i])==0:
-KeyboardInterrupt
-tthtlchome:/home/tthtlc/hairy-bear>vi problem47.py 
-tthtlchome:/home/tthtlc/hairy-bear>python problem47.py 
-^CTraceback (most recent call last):
-  File "problem47.py", line 38, in <module>
-    next=len(find_prime_factor(j))
-  File "problem47.py", line 28, in find_prime_factor
-    if (a%prime_factor[i])==0:
-KeyboardInterrupt
-tthtlchome:/home/tthtlc/hairy-bear>vi problem47.py 
-tthtlchome:/home/tthtlc/hairy-bear>python problem47.py 
-Traceback (most recent call last):
-  File "problem47.py", line 36, in <module>
-    prime_factor=generate_prime(max_number)
-  File "problem47.py", line 16, in generate_prime
-    array=erasthotene_cross(array, max_nos)
-  File "problem47.py", line 7, in erasthotene_cross
-    array = [0 for x in range(n)]
-MemoryError
-tthtlchome:/home/tthtlc/hairy-bear>vi problem47.py 
-tthtlchome:/home/tthtlc/hairy-bear>python problem47.py 
 
 
 1001148 1001147 1001146 1001145
