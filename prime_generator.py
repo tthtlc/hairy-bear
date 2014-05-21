@@ -24,7 +24,7 @@ counter=1
 
 for i in range(2,max_nos,1):
 	if (array[i]!=1):
-		print counter, i
+		print i 
 		if (counter==10001): 
 			break
 		counter+=1

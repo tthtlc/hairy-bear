@@ -26,7 +26,7 @@ print f(4)
 sum=0
 for i in range(2,10**3+1):
 	sum1 = f(i)
-	print sum1, i
+##	print sum1, i
 	sum += sum1
 
 ## ans is 442530011399
