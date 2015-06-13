@@ -9,10 +9,31 @@ upper_bound=[0 for i in range(max)]
 for i in range(max-1,0,-1):
 	sum=sum+Fraction(1,i*i)
 	upper_bound[i]=sum
-	print i
 
-for i in range(max):
-	print upper_bound[i]*1.0
+sum=0
+forward_sum=[0 for i in range(max)]
+sum_cell=[0 for i in range(max)]
+
+def forward_sum_check(index,sum):
+	i=index
+	before_add_sum=sum+Fraction(1,i*i)
+	if (before_add_sum>0.5):
+		i=i+1
+		before_add_sum=sum+Fraction(1,i*i)
+	if (before_add_sum==0.5):
+		for j in range(max):
+			if (sum_cell[j]==1):
+				print j
+				sum_cell[j]=0
+	else:
+		sum_cell[i]=1
+		sum=before_add_sum
+		forward_sum[i]=sum
+		forward_sum_check(index+1,sum)
+
+sum=0
+forward_sum=[0 for i in range(max)]
+forward_sum_check(2,sum)
 
 sys.exit(0)
 
