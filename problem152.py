@@ -17,7 +17,7 @@ sum_cell=[0 for i in range(max)]
 def forward_sum_check(index,sum):
 	i=index
 	before_add_sum=sum+Fraction(1,i*i)
-	if (before_add_sum>0.5):
+	while (before_add_sum>0.5) and (i+1<max):
 		i=i+1
 		before_add_sum=sum+Fraction(1,i*i)
 	if (before_add_sum==0.5):
@@ -26,10 +26,13 @@ def forward_sum_check(index,sum):
 				print j
 				sum_cell[j]=0
 	else:
-		sum_cell[i]=1
-		sum=before_add_sum
-		forward_sum[i]=sum
-		forward_sum_check(index+1,sum)
+		if (before_add_sum+upper_bound[i]>0.5) and (i+1)<max:
+			sum_cell[i]=1
+			print i
+			sum=before_add_sum
+			forward_sum[i]=sum
+			forward_sum_check(i+1,sum)
+			## give up this brnach
 
 sum=0
 forward_sum=[0 for i in range(max)]
