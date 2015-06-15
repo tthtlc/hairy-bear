@@ -15,7 +15,18 @@ def myroot2v2(max,depth):
 	else:
 		return Fraction(2,1)+Fraction(1,myroot2v2(max,depth+1))
 
+def myroot2v3(max):
+	cell=[2 for i in range(max+1)]
+	for i in range(max):
+		j=max-i
+		cell[j-1]=Fraction(2,1)+Fraction(1,cell[j])
+	return cell[0]
+
+count=0
 for i in range(1000):
-	mynum=myroot2v2(i,0)-Fraction(1,1)
+	#mynum1=myroot2v2(i,0)-Fraction(1,1)
+	mynum=myroot2v3(i)-Fraction(1,1)
+	#print mynum1,mynum
 	if  (len(str(mynum.numerator)) -  len(str(mynum.denominator))) > 0:
-		print mynum
+		count=count+1
+print count
