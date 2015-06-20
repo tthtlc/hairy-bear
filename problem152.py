@@ -25,10 +25,10 @@ def forward_sum_check(index,sum):
 			if (sum_cell[j]==1):
 				print j
 				sum_cell[j]=0
+		return 1
 	else:
 		if (before_add_sum+upper_bound[i]>0.5) and (i+1)<max:
 			sum_cell[i]=1
-			print i
 			sum=before_add_sum
 			forward_sum[i]=sum
 			forward_sum_check(i+1,sum)
